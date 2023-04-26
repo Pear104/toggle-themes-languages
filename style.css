@@ -1,0 +1,105 @@
+:root {
+    --primary-background: white;
+    --primary-font-color: black;
+}
+
+[data-theme="dark"] {
+    --primary-background: black;
+    --primary-font-color: white;
+}
+
+
+* {
+    transition: all .3s;
+}
+
+body {
+    display: flex;
+    background-color: var(--primary-background);
+    justify-content: center;
+    align-items: center;
+    /* user-select: none; */
+}
+
+h1,
+p {
+    color: var(--primary-font-color);
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+.wrapper {
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    display: none;
+}
+
+.button-container label {
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: var(--primary-font-color);
+    border-radius: 50px;
+    float: right;
+}
+
+label::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(5px);
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    border-radius: 50px;
+    transition: all .3s;
+    z-index: 1;
+    background-color: var(--primary-background);
+}
+
+input:checked+label::before {
+    transform: translateY(-50%) translateX(48px);
+}
+
+.johncena {
+    width: 200px;
+    aspect-ratio: 403/363;
+    background: center center/contain no-repeat;
+    background-image: url('https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png');
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.khabanh {
+    width: 100px;
+    aspect-ratio: 660/469;
+    background: center center/contain no-repeat;
+    background-image: url('https://vnn-imgs-a1.vgcloud.vn/image1.ictnews.vn/_Files/2019/04/02/cd273738c1c623987ad7(1).jpg');
+}
+
+.language-modal {
+    height: 30px;
+}
