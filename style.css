@@ -98,6 +98,7 @@ input:checked+label::before {
     aspect-ratio: 660/469;
     background: center center/contain no-repeat;
     background-image: url('https://vnn-imgs-a1.vgcloud.vn/image1.ictnews.vn/_Files/2019/04/02/cd273738c1c623987ad7(1).jpg');
+    display: none;
 }
 
 .language-modal {
